@@ -1,24 +1,48 @@
-<h1>GENWORDPASS</h1>
-<p>Here you can generate password.</p>
-
-<form action="{% url 'wordpass' %}">
-    <select name="length">
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="12" selected="selected">12</option>
-        <option value="14">14</option>
-        <option value="16">16</option>
-        <option value="20">20</option>
-        <option value="25">25</option>
-    </select>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+     GENWORDPASS
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+  <div class="container" class="d-flex align-items-center">
+    <h1 class="text-center">GENWORDPASS</h1>
+    <p class="text-center font-weight-light">Here you can generate some password.</p>
     <br />
-    <input type="checkbox" name="uppercase"> has UPPERCASE
     <br />
-    <input type="checkbox" name="special"> has special ch@r@cter$
+    <form action="{% url 'wordpass' %}" class="text-center">
+        <select name="length">
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="12" selected="selected">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+        </select> <span class="font-weight-bold">Length</span>
+        <br />
+        <br />
+        <input type="checkbox" name="uppercase"> includes <span class="font-weight-bold">UPPERCASE</span>
+        <br />
+        <br />
+        <input type="checkbox" name="special"> includes <span class="font-weight-bold">special ch@r@cter$</span>
+        <br />
+        <br />
+        <input type="checkbox" name="digits"> includes <span class="font-weight-bold">d1g1ts</span>
+        <br />
+        <br />
+        <input type="submit" value="Generate" class="btn btn-outline-dark">
+    </form>
     <br />
-    <input type="checkbox" name="digits"> has d1g1ts
     <br />
-    <input type="submit" value="Generate">
-</form>
+    <footer>Created by <span class="font-weight-light">Rudenko Ruslan</span> @Student</footer>
+  </div>
+  </body>
+</html>
