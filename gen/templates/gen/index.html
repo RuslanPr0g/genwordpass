@@ -1,0 +1,24 @@
+<h1>GENWORDPASS</h1>
+<p>Here you can generate password.</p>
+
+<form action="{% url 'wordpass' %}">
+    <select name="length">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="12" selected="selected">12</option>
+        <option value="14">14</option>
+        <option value="16">16</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+    </select>
+    <br />
+    <input type="checkbox" name="uppercase"> has UPPERCASE
+    <br />
+    <input type="checkbox" name="special"> has special ch@r@cter$
+    <br />
+    <input type="checkbox" name="digits"> has d1g1ts
+    <br />
+    <input type="submit" value="Generate">
+</form>
